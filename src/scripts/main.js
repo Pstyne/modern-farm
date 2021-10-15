@@ -1,46 +1,21 @@
 import { createPlan } from "./plan.js";
 
-import { createAsparagus } from "./seeds/asparagus.js";
-import { createCorn } from "./seeds/corn.js";
-import { createPotato } from "./seeds/potato.js";
-import { createSoybean } from "./seeds/soybean.js";
-import { createSunflower } from "./seeds/sunflower.js";
-import { createWheat } from "./seeds/wheat.js";
+import { usePlants } from "./field.js";
 
-import { addPlant, usePlants } from "./field.js";
+import { plantSeeds } from "./tractor.js"; 
+
+// Try to use plants before they're planted... I dare you
+// const plants = usePlants();
 
 // Create plan
-// const yearlyPlan = createPlan();
+const yearlyPlan = createPlan();
 
-// console.log(yearlyPlan);
+// Plant the seeds
+plantSeeds(yearlyPlan);
 
-
-// Create seeds
-const asparagusSeed = createAsparagus();
-const cornSeed = createCorn();
-const potatoSeed = createPotato();
-const soybeanSeed = createSoybean();
-const sunflowerSeed = createSunflower();
-const wheatSeed = createWheat();
-
-// console.log(
-//   asparagusSeed,
-//   cornSeed,
-//   potatoSeed,
-//   soybeanSeed,
-//   sunflowerSeed,
-//   wheatSeed
-// );
-
-// Plant seeds
-addPlant(asparagusSeed);
-addPlant(cornSeed);
-addPlant(potatoSeed);
-addPlant(soybeanSeed);
-addPlant(sunflowerSeed);
-addPlant(wheatSeed);
-
+// Use the plants after they're planted
 const plants = usePlants();
 
 // COOL! No array in the array
+// I think this is the way I was supposed to do it.
 console.log(plants);
