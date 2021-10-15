@@ -28,3 +28,15 @@ h1,h2,h3,h4,h5,h6 {
     background-color: darksalmon;
 }
 
+/* Flex your plants! */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.plant {
+    margin: 2em;
+}
+
