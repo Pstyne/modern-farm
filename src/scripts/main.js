@@ -4,6 +4,8 @@ import { usePlants } from "./field.js";
 
 import { plantSeeds } from "./tractor.js"; 
 
+import { harvestPlants } from "./harvester.js";
+
 // Try to use plants before they're planted... I dare you
 // const plants = usePlants();
 
@@ -19,3 +21,6 @@ const plants = usePlants();
 // COOL! No array in the array
 // I think this is the way I was supposed to do it.
 console.log(plants);
+
+// OH BOY!!! Veggie heaven!
+console.log(harvestPlants(plants));
